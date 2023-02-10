@@ -1,12 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import Card, { CardVariant } from './component/Card';
-import UserList from './component/UserList';
-import { ITodo, IUser } from './types/types';
-import axios from 'axios';
-import List from './component/List';
-import UserItem from './component/UserItem';
-import TodoItem from './component/TodoItem';
-import EventExample from './component/EventExample';
 import {BrowserRouter, Link, Route, Routes , } from 'react-router-dom'
 import UserPages from './component/UserPages';
 import TodosPage from './component/TodosPage';

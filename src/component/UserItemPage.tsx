@@ -5,13 +5,13 @@ import {useParams, useNavigate} from 'react-router-dom';
 
 
 interface UserItemPageParams {
-    id?: string;
+    id: string;
 }
 
 const UserItemPage: FC = () => {
 
     const [user, setUser] = useState<IUser | null>(null)
-    const params = useParams<UserItemPageParams>()
+    const params = useParams<{UserItemPageParams: string}>()
     const history = useNavigate()
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const UserItemPage: FC = () => {
 
     async function fetchUser() {
         try {
-            const response = await axios.get<IUser>('https://jsonplaceholder.typicode.com/users/' + params.id)
+            const response = await axios.get<IUser>('https://jsonplaceholder.typicode.com/users/' + params)
             setUser(response.data)
         } catch (e) {
             alert(e)
