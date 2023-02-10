@@ -8,7 +8,7 @@ interface UserItemProps {
 
 const UserItem: FC<PropsWithChildren<UserItemProps>> = ({user}) => {
     return (
-            <div  style={{ padding: 15, border: '1px solid blue' }}>
+            <div  style={{ padding: 15, border: '1px solid blue', marginTop: '10px' }}>
                 {user.id}. {user.name} проживает в городе {user.address.city}
                 на улице {user.address.street}
             </div>
